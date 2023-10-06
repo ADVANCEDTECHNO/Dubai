@@ -14,10 +14,9 @@ h2 {text-align:center;text-shadow:5px 5px orange;font-size:16px;}
   .Food {text-align:center;}
   .Food img{width:250px;height:200px;transition:width height transform 2s;}
   .Food img:hover{width:300px;height:260px;transform:rotate(-10deg);}
-  div{text-align:center;}
-  .parent{position:relative;height:200px;width:250px;}
-  .child{position:absolute;transition:opacity 1s;height:200px;width:250px;top:0;left:0;}
-  .child:hover{opacity:0;}
+  .overlap{text-align:center;position:relative;height:200px;width:250px;}
+  .overlap img{position:absolute;transition:opacity 1s;}
+  .overlap img:hover{opacity:0;}
   </style>
 </head>
 <body>
@@ -46,10 +45,10 @@ h2 {text-align:center;text-shadow:5px 5px orange;font-size:16px;}
   <h3>Harees</h3>
     <img src="Harees.jpg">
   </div>
-  <div>
+  <div id="overlap">
     <h3>Oozie</h3>
-    <img class="parent" src="Oozie.jpg"> 
-    <img class="child" src="Oozie 1.jpeg">
+    <img src="Oozie.jpg"> 
+    <img src="Oozie 1.jpeg">
     </div>
 </main>
 <footer>
