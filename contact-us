@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Dubai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  function validate(){
+    var name1=document.getElementById("name").value;
+    var pone1=document.getElementById("phone").value;
+var email1=document.getElementById("email").value;
+    var message1=document.getElementById("message").value;
+    if(name1.length<5){
+      text="Enter full name";
+      error_message.innerHTML=text;
+      return false;
+    }
+    if(isNaN(phone1)||phone1.length!=10){
+      text="Enter valid number;
+        error_message.innerHTML=text;
+      return false;
+    }
+    if(email1.indexof("@")|| email1.length<6){
+      text="Enter valid email";
+      error_message.innerHTML=text;
+      return false;
+    }
+      if(message1<10){
+        text="Enter more than 150 characters";
+        error_message.innerHTML=text;
+        return false;
+      }
+    alert("Form submitted successfully");
+    return true;
+    }
+</script>
+<style>
+header{background-color:#adff2f;width:100%; height:80px;text-align:center;}
+footer{background-color:#32cd32;width:100%; height:60px;text-align:center;}
+nav ul li{list-style-type:none;display:inline-block;font-size:20px;font-weight:bold;}
+  nav ul li a{text-decoration:none;margin:10px;colo:white;}
+  .wrapper{top:200px;left:500px;width:400px;padding:25px;}
+.wrapper h2{text-align:center;letter-spacing:3px;}
+.wrapper input-field{margin-bottom:10px;}
+  .wrapper input{width:100%;padding:10px;}
+  .wrapper textarea{width:100%;padding:10px;height:80px;}
+.wrapper .btn input[type="submit"]{width:100%;letter-spacing:5px;font-weigth:bold;}
+  #error_message{text-align:center;}
+  
+  
+  
+  </style>
+</head>
+<body>
+<header>
+  <h1>Dubai</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hotel.html">Hotels</a></li>
+      <li><a href="food.html">Food</a></li>
+      <li><a href="contact-us.html">Contact us</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="wrapper">
+    <h2>Contact us</h2>
+    <form id="myform" onsubmit="return.validate();">
+      <div class="input-field">
+        <input type="text" placeholder="Name" id="name">
+      </div>
+        <div class="input-field">
+        <input type="text" placeholder="Phone" id="phone">
+      </div>
+       <div class="input-field">
+        <input type="text" placeholder="Email" id="email">
+      </div>
+        <div class="input-field">
+        <textarea placeholder="Message" id="message"></textarea>
+      <div class="btn">
+        <input type="submit">
+      </div>
+      <div id="error_message"></div>
+      
+      
+<main>
+</main>
+<footer>
+<p>This website is made with Mindchamp
+<a href="https://www.visitdubai.com/en/">To know more about Dubai, click here </a></p>
+</footer>
+</body>
+</html>
