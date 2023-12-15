@@ -77,5 +77,24 @@ nav ul li{list-style-type:none;display:inline-block;font-size:20px;font-weight:b
 <p>This website is made with Mindchamp
 <a href="https://www.visitdubai.com/en/">To know more about Dubai, click here </a></p>
 </footer>
+  <script src="<script   src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>">
+   <script> 
+     $(function(){
+     $('.faq-list-item').click(function(){
+       var $answer=$(this).find('.answer')
+       if($answer.hasClass('open')){
+         $answer.removeClass('open');
+         $answer.slideUp();
+         $(this).find('span').text('+');
+       } else{
+         $answer.addClass('open');
+         $answer.slideDown();
+         $(this).find('span').text('-');
+
+       }
+     });
+
+     });
+  </script>
 </body>
 </html>
